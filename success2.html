@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Номер успешно изменен</title>
+</head>
+
+<body class="m-page">
+    <div class="wrapper">
+
+        <main class="content">
+
+            <div class="success">
+                <div class="success__inner">
+                    <img src="img/success-icon.svg" alt="" class="success__icon">
+                    <div class="success__text">
+                        <div class="success__title text24">
+                            Номер успешно изменен
+                        </div>
+
+                    </div>
+                    <a href="" class="success__link m-btn m-btn-violet">
+                        <span>На главную</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <div class="modal" id="loginPhoneModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Вход по номеру
+                </div>
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg">
+                        <label>Телефон</label>
+                        <input type="tel" placeholder="+7 (999) 000-00-00">
+                    </div>
+                </div>
+                <div class="modal__nav">
+                    <button class="modal__btn m-btn m-btn-violet">
+                        <span>Отправить код</span>
+                    </button>
+                    <button class="modal__btn m-btn m-btn-violet-outline">
+                        <span>Отмена</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal review-modal" id="reviewModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="review-card__city">
+
+            </div>
+            <div class="review-card__name">
+
+            </div>
+            <div class="review-card__content">
+                <div class="review-card__text">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="reviewModal2">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Оставить отзыв
+                </div>
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg">
+                        <label>Имя</label>
+                        <input type="text" placeholder="Имя">
+                    </div>
+                    <div class="fg">
+                        <label>Телефон</label>
+                        <input type="tel" placeholder="+7 (999) 000-00-00">
+                    </div>
+                    <div class="fg">
+                        <label>Email</label>
+                        <input type="email" placeholder="myemail@myemail.ru">
+                    </div>
+                    <div class="fg">
+                        <label>Город</label>
+                        <input type="text" placeholder="Москва">
+                    </div>
+                    <div class="fg">
+                        <label>Ваш отзыв</label>
+                        <textarea placeholder="Введите сообщение"></textarea>
+                    </div>
+                </div>
+                <div class="modal__nav">
+                    <button class="modal__btn _full m-btn m-btn-violet">
+                        <span>Оставить отзыв</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal call-modal" id="callModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="call-modal__phone">
+                <div class="call-modal__phone-title">
+                    8 (800) 555-66-34
+                </div>
+            </div>
+            <div class="modal__nav">
+                <button data-copy="8 (800) 555-66-34" class="modal__btn m-btn m-btn-violet">
+                    <img src="img/copy.svg" alt="">
+                    <span>Скопировать</span>
+                </button>
+                <button class="modal__btn m-btn m-btn-violet">
+                    <img src="img/phone.svg" alt="">
+                    <span>Позвонить</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal call-modal" id="callModal2">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="call-modal__phone">
+                <div class="call-modal__phone-title">
+                    vipvolzhsky@mail.ru
+                </div>
+            </div>
+            <div class="modal__nav">
+                <button data-copy="vipvolzhsky@mail.ru" class="modal__btn m-btn m-btn-violet">
+                    <img src="img/copy.svg" alt="">
+                    <span>Скопировать</span>
+                </button>
+                <button class="modal__btn m-btn m-btn-violet">
+                    <img src="img/phone.svg" alt="">
+                    <span>Позвонить</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="phoneModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Изменить телефон
+                </div>
+            </div>
+            <div class="modal__desc">
+                Введите новый номер телефона, мы отправим на него код для подтверждения и активации
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg">
+                        <label>Телефон</label>
+                        <input type="tel" placeholder="+7 (999) 000-00-00">
+                    </div>
+                    <fieldset class="fg ">
+                        <label>Пароль:</label>
+                        <div class="fg__field">
+                            <input type="password" placeholder="Пароль">
+                            <button type="button" class="pass-toggle">
+                                <img src="img/eye.svg" alt="" class="_view1">
+                                <img src="img/eye2.svg" alt="" class="_view2">
+                            </button>
+                        </div>
+                    </fieldset>
+
+                </div>
+                <div class="modal__nav">
+                    <button class="modal__btn m-btn m-btn-violet">
+                        <span>Отправить</span>
+                    </button>
+                    <button class="modal__btn _close-modal m-btn m-btn-violet-outline">
+                        <span>Отмена</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="phoneModal2">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Изменить телефон
+                </div>
+            </div>
+            <div class="modal__desc">
+                Введите 6-ти значный код который мы отправили <br>
+        для смены номера телефона
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg">
+                        <label>Код доступа:</label>
+                        <div class="code-field">
+                            <div class="input-group">
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                            </div>
+                            <div class="input-group">
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-form__hint">
+                    Не пришел код? <button class="modal-form__hint-btn">Отправить повторно</button>
+                </div>
+                <div class="modal__nav">
+                    <button class="modal__btn m-btn m-btn-violet">
+                        <span>Отправить</span>
+                    </button>
+                    <button class="modal__btn _close-modal m-btn m-btn-violet-outline">
+                        <span>Отмена</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="modal logout-modal" id="logoutModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <img src="img/success-icon.svg" alt="" class="success__icon">
+            <div class="modal__top">
+                <div class="modal__title">
+                    Выйти из учетной записи ?
+                </div>
+            </div>
+            <div class="modal__nav">
+                <button class="modal__btn m-btn m-btn-violet">
+                    <span>Отправить</span>
+                </button>
+                <button class="modal__btn _close-modal m-btn m-btn-violet-outline">
+                    <span>Отмена</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="passModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Изменить пароль
+                </div>
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <fieldset class="fg ">
+                        <label>Старый пароль</label>
+                        <div class="fg__field">
+                            <input type="password" placeholder="">
+                            <button type="button" class="pass-toggle">
+                                <img src="img/eye.svg" alt="" class="_view1">
+                                <img src="img/eye2.svg" alt="" class="_view2">
+                            </button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fg ">
+                        <label>Новый пароль</label>
+                        <div class="fg__field">
+                            <input type="password" placeholder="">
+                            <button type="button" class="pass-toggle">
+                                <img src="img/eye.svg" alt="" class="_view1">
+                                <img src="img/eye2.svg" alt="" class="_view2">
+                            </button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fg ">
+                        <label>Подтвердите пароль</label>
+                        <div class="fg__field">
+                            <input type="password" placeholder="">
+                            <button type="button" class="pass-toggle">
+                                <img src="img/eye.svg" alt="" class="_view1">
+                                <img src="img/eye2.svg" alt="" class="_view2">
+                            </button>
+                        </div>
+                    </fieldset>
+
+                </div>
+                <div class="modal__nav">
+                    <button class="modal__btn m-btn m-btn-violet">
+                        <span>Подтвердить</span>
+                    </button>
+                    <button class="modal__btn _close-modal m-btn m-btn-violet-outline">
+                        <span>Отмена</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="emailModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Изменить email
+                </div>
+            </div>
+            <div class="modal__desc">
+                Введите новый адрес электронной почты, мы отправим на него ссылку для подтверждения и активации
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg">
+                        <label>Email</label>
+                        <input type="email" placeholder="myemail@myemail.ru">
+                    </div>
+                    <fieldset class="fg ">
+                        <label>Пароль:</label>
+                        <div class="fg__field">
+                            <input type="password" placeholder="Пароль">
+                            <button type="button" class="pass-toggle">
+                                <img src="img/eye.svg" alt="" class="_view1">
+                                <img src="img/eye2.svg" alt="" class="_view2">
+                            </button>
+                        </div>
+                    </fieldset>
+
+                </div>
+                <div class="modal__nav">
+                    <button class="modal__btn m-btn m-btn-violet">
+                        <span>Отправить</span>
+                    </button>
+                    <button class="modal__btn _close-modal m-btn m-btn-violet-outline">
+                        <span>Отмена</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="emailModal2">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Изменить email
+                </div>
+            </div>
+            <div class="modal__desc">
+                На указанный вами адрес электронной почты отправлено письмо со ссылкой для активации
+                нового адреса электронной почты
+            </div>
+            <div class="modal__hint">
+                Пожалуйста, проверьте почту и активируйте email
+            </div>
+            <div class="modal__nav">
+                <button class="modal__btn _full m-btn m-btn-violet">
+                    <span>Закрыть</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="regSuccessModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Успешная регистрация
+                </div>
+            </div>
+            <div class="modal__desc">
+                На указанный вами адрес электронной почты отправлено письмо со ссылкой для активации
+                нового адреса электронной почты
+            </div>
+            <div class="modal__hint">
+                Пожалуйста, проверьте почту и активируйте email
+            </div>
+            <div class="modal__nav">
+                <button class="modal__btn _full m-btn m-btn-violet">
+                    <span>Закрыть</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal reg-modal" id="regModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Регистрация аккаунта
+                </div>
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg _full-laptop _error">
+                        <label>Email</label>
+                        <input type="email" placeholder="Адрес электронной почты">
+                    </div>
+                    <fieldset class="fg _full-laptop">
+                        <label>Пароль:</label>
+                        <div class="fg__field">
+                            <input type="password" placeholder="Пароль">
+                            <button type="button" class="pass-toggle">
+                                <img src="img/eye.svg" alt="" class="_view1">
+                                <img src="img/eye2.svg" alt="" class="_view2">
+                            </button>
+                        </div>
+                    </fieldset>
+
+                    <div class="fg _success">
+                        <label>Имя</label>
+                        <input type="email" placeholder="Имя">
+                    </div>
+                    <div class="fg">
+                        <label>Фамилия</label>
+                        <input type="email" placeholder="Фамилия">
+                    </div>
+                    <div class="fg _full-laptop">
+                        <label>Телефон</label>
+                        <input type="tel" placeholder="+7 (999) 000-00-00">
+                        <div class="fg__info">
+                            <button type="button">Подтвердить</button>
+                        </div>
+                    </div>
+                    <div class="fg _full-laptop">
+                        <label>Код-подтверждения</label>
+                        <input class="_code-field" type="text" placeholder="000 — 000">
+                    </div>
+                </div>
+                <div class="modal__nav">
+                    <button class="modal__btn m-btn m-btn-violet">
+                        <span>Создать аккаунт</span>
+                    </button>
+                    <button class="modal__btn _close-modal m-btn m-btn-violet-outline">
+                        <span>Отмена</span>
+                    </button>
+                </div>
+                <div class="m-check">
+                    <input type="checkbox">
+                    <label>
+                        <span>
+                        Даю своё согласие на обработку представленных мной персональных данных в соответствии
+                        с <a href="">политикой обработки персональных данных</a>
+                    </span>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="modal" id="lkModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Личный кабинет
+                </div>
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg">
+                        <label>Email</label>
+                        <input type="email" placeholder="Электронная почта">
+                    </div>
+                    <fieldset class="fg ">
+                        <label>Пароль:</label>
+                        <div class="fg__field">
+                            <input type="password" placeholder="Пароль">
+                            <button type="button" class="pass-toggle">
+                                <img src="img/eye.svg" alt="" class="_view1">
+                                <img src="img/eye2.svg" alt="" class="_view2">
+                            </button>
+                        </div>
+                    </fieldset>
+
+                </div>
+                <div class="modal-form__hint">
+                    <button class="modal-form__hint-btn">Восстановить пароль</button>
+                </div>
+                <div class="modal__nav _type2">
+                    <button class="modal__btn m-btn m-btn-violet">
+                        <span>Войти</span>
+                    </button>
+                    <button class="modal__btn m-btn m-btn-violet-outline">
+                        <span>Войти с помощью телефона</span>
+                    </button>
+                </div>
+                <div class="modal-form__hint">
+                    Аккаунта ещё нет? <button class="modal-form__hint-btn">Создать учетную запись</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="confirmModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Подтверждение входа
+                </div>
+            </div>
+            <div class="modal__desc">
+                Введите 6-ти значный код который мы отправили <br>
+        для смены номера телефона
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg">
+                        <label>Код доступа:</label>
+                        <div class="code-field">
+                            <div class="input-group">
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                            </div>
+                            <div class="input-group">
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-form__hint">
+                    Не пришел код? <button class="modal-form__hint-btn">Отправить повторно</button>
+                </div>
+                <div class="modal__nav">
+                    <button class="modal__btn m-btn m-btn-violet">
+                        <span>Войти</span>
+                    </button>
+                    <button class="modal__btn _close-modal m-btn m-btn-violet-outline">
+                        <span>Отмена</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="modal" id="recoverPassModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Восстановление данных
+                </div>
+            </div>
+            <div class="modal__desc">
+                Введите email который привязан к аккаунту, мы вышлем код для восстановления пароля
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg">
+                        <label>Email</label>
+                        <input type="email" placeholder="myemail@myemail.ru">
+                    </div>
+                </div>
+                <div class="modal-form__hint">
+                    Забыли email? <button class="modal-form__hint-btn">Войти по номеру телефона</button>
+                </div>
+                <div class="modal__nav">
+                    <button class="modal__btn m-btn m-btn-violet">
+                        <span>Восстановить</span>
+                    </button>
+                    <button class="modal__btn _close-modal m-btn m-btn-violet-outline">
+                        <span>Отмена</span>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <div class="modal" id="recoverPassModal2">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Восстановление данных
+                </div>
+            </div>
+            <div class="modal__desc">
+                Введите номер телефона который привязан к аккаунту, мы вышлем код для восстановления пароля
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg">
+                        <label>Телефон</label>
+                        <input type="tel" placeholder="+7 (999) 000-00-00">
+                    </div>
+                </div>
+                <div class="modal-form__hint">
+                    Забыли номер телефона? <button class="modal-form__hint-btn">Войти по email</button>
+                </div>
+                <div class="modal__nav">
+                    <button class="modal__btn m-btn m-btn-violet">
+                        <span>Восстановить</span>
+                    </button>
+                    <button class="modal__btn _close-modal m-btn m-btn-violet-outline">
+                        <span>Отмена</span>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+    <div class="modal" id="recoverPassModal3">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn _close-modal">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29545 8.00129L15.0641 2.23325C15.4222 1.87516 15.4222 1.29459 15.0641 0.936534C14.706 0.578447 14.1255 0.578447 13.7674 0.936534L7.99934 6.70517L2.2313 0.936534C1.87321 0.578447 1.29264 0.578447 0.934581 0.936534C0.576522 1.29462 0.576494 1.87519 0.934581 2.23325L6.70322 8.00129L0.934581 13.7694C0.576494 14.1274 0.576494 14.708 0.934581 15.0661C1.29267 15.4241 1.87324 15.4242 2.2313 15.0661L7.99934 9.2974L13.7674 15.0661C14.1255 15.4242 14.706 15.4242 15.0641 15.0661C15.4222 14.708 15.4222 14.1274 15.0641 13.7694L9.29545 8.00129Z" fill="#39394E" />
+                </svg>
+            </button>
+            <div class="modal__top">
+                <div class="modal__title">
+                    Код восстановления
+                </div>
+            </div>
+            <div class="modal__desc">
+                Введите 6-ти значный код который мы отправили <br>
+        для смены номера телефона
+            </div>
+            <form class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="fg">
+                        <label>Код доступа:</label>
+                        <div class="code-field">
+                            <div class="input-group">
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                            </div>
+                            <div class="input-group">
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                                <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-form__hint">
+                    Не пришел код? <button class="modal-form__hint-btn">Отправить повторно</button>
+                </div>
+                <div class="modal__nav">
+                    <button class="modal__btn m-btn m-btn-violet">
+                        <span>Сбросить пароль</span>
+                    </button>
+                    <button class="modal__btn _close-modal m-btn m-btn-violet-outline">
+                        <span>Отмена</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
